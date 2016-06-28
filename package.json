@@ -1,0 +1,30 @@
+{
+    "name": "either.ts",
+    "version": "1.0.0",
+    "description": "Either type for TypeScript. Borrowed from [scala's Either](http://www.scala-lang.org/api/2.7.5/scala/Either.html).",
+    "main": "src/main/lib.ts",
+    "scripts": {
+        "test": "./node_modules/.bin/tsc src/test/example.ts && node src/test/example.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/alexander-matsievsky/either.ts.git"
+    },
+    "keywords": [
+        "functional",
+        "either",
+        "typescript"
+    ],
+    "author": "Alexander Matsievsky <alexander.matsievsky@gmx.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/alexander-matsievsky/either.ts/issues"
+    },
+    "homepage": "https://github.com/alexander-matsievsky/either.ts#readme",
+    "devDependencies": {
+        "typescript": "^2.0.0-dev.20160628"
+    },
+    "dependencies": {
+        "option.ts": "github:alexander-matsievsky/option.ts"
+    }
+}

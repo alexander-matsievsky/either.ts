@@ -12,13 +12,13 @@ abstract class $Either<E, A> {
     }
 
     fold<B>(fe:(e:E) => B, fa:(a:A) => B):B {
-        switch (true) {
-            case this.isLeft():
-                return fe((this as any).unwrap());
-            case this.isRight():
-            default:
-                return fa((this as any).unwrap());
+        if (this.isLeft()) {
+            return fe(this.unwrap());
         }
+        if (this.isRight()) {
+            return fa(this.unwrap());
+        }
+        throw new Error("UNREACHABLE");
     }
 
     flatMap<B>(f:(a:A) => Either<E, B>):Either<E, B> {
@@ -62,7 +62,7 @@ abstract class $Either<E, A> {
 
     foreach<B>(f:(a:A) => void):void {
         return this.fold(
-            _ => void _,
+            _ => undefined,
             a => f(a)
         );
     }

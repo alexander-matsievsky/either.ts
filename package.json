@@ -4,7 +4,8 @@
     "description": "Either type for TypeScript. Borrowed from [scala's Either](http://www.scala-lang.org/api/2.7.5/scala/Either.html).",
     "main": "src/main/lib.ts",
     "scripts": {
-        "test": "./node_modules/.bin/tsc src/test/example.ts && node src/test/example.js"
+        "test": "./node_modules/.bin/tsc src/test/example.ts && node src/test/example.js",
+        "postinstall": "cp src/main/lib.ts index.ts"
     },
     "repository": {
         "type": "git",

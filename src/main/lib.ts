@@ -1,6 +1,4 @@
-// todo: find out why the typeguards do not work.
-
-import {None, Some, Option} from "option.ts/src/main/lib";
+import {None, Some, Option} from "option.ts/index";
 
 abstract class $Either<E, A> {
     isLeft():this is Left<E> {
